@@ -15,9 +15,11 @@ struct SearchView: View {
             SearchBar(text: $searchText)
             
             VStack(alignment: .leading){
-                ForEach(0..<15) { _ in
+                ForEach(0..<8) { _ in
                     HStack{Spacer()}
-                    UserCell()
+                    NavigationLink(destination: UserProfileView(), label: {
+                        UserCell()
+                    })
                 }
             }.padding(.leading, 25)
         }.padding(.top, 10)
