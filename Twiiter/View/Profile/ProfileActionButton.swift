@@ -20,7 +20,7 @@ struct ProfileActionButton: View {
                 .overlay(RoundedRectangle(cornerRadius: 25)
                             .stroke(Color.black, lineWidth: 1))
                 
-                ScrollView{}
+                
             }
             
             
@@ -42,9 +42,7 @@ struct ProfileActionButton: View {
                     
                     
                 }
-                
-                ScrollView{}
-            }
+             }
             
             
             

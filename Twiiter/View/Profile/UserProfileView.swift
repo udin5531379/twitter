@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct UserProfileView: View {
+    @State var selectedOptions : TweetFilterOption = .tweet
     var body: some View {
         
         VStack{
             ProfileHeaderView()
             ProfileActionButton(isLoggedIn: false)
+            FilterButtonView(selectedOptions: $selectedOptions)
         }
         
     }
