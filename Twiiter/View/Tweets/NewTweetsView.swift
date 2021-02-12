@@ -14,19 +14,21 @@ struct NewTweetsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                HStack(spacing: 12) {
+                HStack(alignment: .top , spacing: 12) {
                     Image("batman")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 60, height: 60)
                         .clipShape(Circle())
+                        .padding(.top)
                     
                     
                     PlaceHolder(placeholderText: "What's on your mind ?", text: $tweetStatus)
                         .foregroundColor(.primary)
                         .frame(width: UIScreen.main.bounds.width - 150, height: 100)
-                        .padding(.all)
-                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.black, lineWidth: 0.1))
+                        .padding(.horizontal, 5)
+                        .padding(.top, 10)
+                        
                     
                     
                     
