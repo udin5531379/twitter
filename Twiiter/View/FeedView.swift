@@ -12,7 +12,7 @@ struct FeedView: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             
-            ScrollView{
+        ScrollView{
                 VStack{
                     ForEach(0..<20){ _ in
                         TweetCell()
@@ -36,7 +36,7 @@ struct FeedView: View {
             .clipShape(Circle())
             .padding()
             .fullScreenCover(isPresented: $isPresented, content: {
-                NewTweetsView(isPresented: $isPresented)
+                NewTweetsView(isPresented: $isPresented, tweetStatus: "")
             })
         }
         
