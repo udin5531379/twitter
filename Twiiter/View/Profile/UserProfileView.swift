@@ -11,12 +11,20 @@ struct UserProfileView: View {
     @State var selectedOptions : TweetFilterOption = .tweet
     var body: some View {
         
-        VStack{
-            ProfileHeaderView()
-            ProfileActionButton(isLoggedIn: false)
-            FilterButtonView(selectedOptions: $selectedOptions)
-        }
-        
+        VStack(spacing: 0){
+                ProfileHeaderView()
+                ProfileActionButton(isLoggedIn: true)
+                FilterButtonView(selectedOptions: $selectedOptions)
+                
+                ScrollView{
+                    ForEach(0..<9) { _ in
+                        TweetCell()
+                    }.padding()
+                }
+        }.navigationBarTitle("Profile", displayMode: .inline)
+        .navigationBarHidden(false)
+        .padding(.top, 20)
+           
     }
 }
 

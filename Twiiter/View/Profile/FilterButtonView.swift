@@ -23,6 +23,7 @@ enum TweetFilterOption: Int, CaseIterable {
 
 struct FilterButtonView: View {
     
+    @Environment(\.colorScheme) var colorScheme
     @Binding var selectedOptions : TweetFilterOption
     var width = UIScreen.main.bounds.width / CGFloat(TweetFilterOption.allCases.count)
     
@@ -39,23 +40,25 @@ struct FilterButtonView: View {
                 ForEach(TweetFilterOption.allCases, id: \.self) { options in
                     Button(action: {
                         self.selectedOptions = options
+                        
                     }, label: {
                         Text(options.title)
                             .frame(width: width, height: 30, alignment: .center)
-                            .foregroundColor(.black)
-                            
+                            .foregroundColor(selectedOptions.title == options.title ? (colorScheme == .dark ? Color.white : Color.black) : .gray)
+    
                         })
                     }
             }
         
             Rectangle()
-                .background(Color.blue)
+                .background(Color.gray)
                 .frame(width: width - 10, height: 3, alignment: .center)
                 .padding(.leading, padding)
                 .animation(.spring())
                 
+                
         
-            ScrollView{}
+            
         
         }.padding(.top, 10)
     
