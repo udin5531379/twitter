@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2787C2B525D711C60007DD05 /* PlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787C2B425D711C60007DD05 /* PlaceHolder.swift */; };
+		2787C2B925D73A670007DD05 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787C2B825D73A670007DD05 /* LoginView.swift */; };
+		2787C2BD25D73A790007DD05 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787C2BC25D73A790007DD05 /* RegistrationView.swift */; };
+		2787C2CF25D9DE070007DD05 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2787C2CE25D9DE070007DD05 /* Keyboard.swift */; };
 		279E024725BB354D00E88B52 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E024625BB354D00E88B52 /* Message.swift */; };
 		279E024A25BEFBCF00E88B52 /* ActualChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E024925BEFBCF00E88B52 /* ActualChatView.swift */; };
 		27AB297425D1D4FA003803A1 /* NewMessageViewForMessageTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB297325D1D4FA003803A1 /* NewMessageViewForMessageTab.swift */; };
@@ -34,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		2787C2B425D711C60007DD05 /* PlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolder.swift; sourceTree = "<group>"; };
+		2787C2B825D73A670007DD05 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2787C2BC25D73A790007DD05 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		2787C2CE25D9DE070007DD05 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		279E024625BB354D00E88B52 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		279E024925BEFBCF00E88B52 /* ActualChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualChatView.swift; sourceTree = "<group>"; };
 		27AB297325D1D4FA003803A1 /* NewMessageViewForMessageTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewForMessageTab.swift; sourceTree = "<group>"; };
@@ -75,8 +81,18 @@
 			isa = PBXGroup;
 			children = (
 				2787C2B425D711C60007DD05 /* PlaceHolder.swift */,
+				2787C2CE25D9DE070007DD05 /* Keyboard.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		2787C2B725D73A320007DD05 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				2787C2B825D73A670007DD05 /* LoginView.swift */,
+				2787C2BC25D73A790007DD05 /* RegistrationView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		27AB299225D32577003803A1 /* Profile */ = {
@@ -101,6 +117,7 @@
 		27B401302590BC120093D4C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2787C2B725D73A320007DD05 /* Authentication */,
 				27E052C325D5DFDC00E71C58 /* Tweets */,
 				27AB299225D32577003803A1 /* Profile */,
 				27B40146259CAD730093D4C4 /* Messages */,
@@ -261,12 +278,15 @@
 			files = (
 				27B4013E2592373B0093D4C4 /* SearchView.swift in Sources */,
 				27F4CB20258707B800535973 /* ContentView.swift in Sources */,
+				2787C2BD25D73A790007DD05 /* RegistrationView.swift in Sources */,
 				27B401332590BC560093D4C4 /* FeedView.swift in Sources */,
 				27E052C525D5DFF600E71C58 /* NewTweetsView.swift in Sources */,
 				27AB299B25D326A6003803A1 /* ProfileActionButton.swift in Sources */,
 				27F4CB1E258707B800535973 /* TwiiterApp.swift in Sources */,
 				27AB299825D32691003803A1 /* ProfileHeaderView.swift in Sources */,
 				27B40154259D89330093D4C4 /* ChatView.swift in Sources */,
+				2787C2B925D73A670007DD05 /* LoginView.swift in Sources */,
+				2787C2CF25D9DE070007DD05 /* Keyboard.swift in Sources */,
 				2787C2B525D711C60007DD05 /* PlaceHolder.swift in Sources */,
 				27AB299E25D326BE003803A1 /* FilterButtonView.swift in Sources */,
 				27B4013B2590F2060093D4C4 /* TweetCell.swift in Sources */,

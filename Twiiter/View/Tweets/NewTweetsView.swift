@@ -28,11 +28,7 @@ struct NewTweetsView: View {
                         .frame(width: UIScreen.main.bounds.width - 150, height: 100)
                         .padding(.horizontal, 5)
                         .padding(.top, 10)
-                        
-                    
-                    
-                    
-                    
+                 
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 30)
                 .navigationBarItems(leading: Button(action: {

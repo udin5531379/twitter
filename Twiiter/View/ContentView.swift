@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isLoginViewPresent: Bool = false
     var body: some View {
         NavigationView{
             
@@ -31,6 +32,14 @@ struct ContentView: View {
                       }
             }
             .navigationBarTitle("Home")
+            .navigationBarItems(leading: Button(action: {
+                isLoginViewPresent.toggle()
+            }, label: {
+                Text("Login")
+            }))
+            .sheet(isPresented: $isLoginViewPresent, content: {
+                LoginView(username: "", password: "")
+            })
             
         }
     }
