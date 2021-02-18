@@ -39,18 +39,23 @@ struct ConversationView: View {
                 
              }
             
-            Button(action: {isShowingNewMessageView.toggle()}, label: {
+            Button(action: {
+                    isShowingNewMessageView.toggle()
+                
+            }, label: {
                 Image(systemName: "envelope")
                     .renderingMode(.template)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 25, height: 25)
                     .padding()
+                
             })
             .background(Color(red: 32 / 255, green: 156 / 255, blue: 234 / 255))
             .foregroundColor(Color(.white))
             .clipShape(Circle())
             .padding()
+            .padding(.bottom, 70)
             .sheet(isPresented: $isShowingNewMessageView, content: {
                 NewMessageViewForMessageTab(show: $isShowingNewMessageView, showChat: $showChat)
             })

@@ -12,6 +12,7 @@ struct TwiiterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            RegistrationView(email: "", username: "", password: "", retypePassword: "")
         }
     }
 }

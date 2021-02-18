@@ -20,15 +20,15 @@ struct LoginView: View {
         NavigationView {
             ZStack {
                 
+                Image("backg")
+                    .resizable()
+                 
                 NavigationLink(
-                    destination: RegistrationView(email: "", username: "", password: "", retypePassword: ""),
+                    destination: RegistrationView(email: "", username: "", password: "", retypePassword: "").navigationBarBackButtonHidden(true),
                     isActive: $isRegistrationActive,
                     label: {
                         Text("")
                     })
-                
-                Color.black
-                
                 VStack{
                     Image("twitter")
                         .resizable()
@@ -41,7 +41,7 @@ struct LoginView: View {
                             .padding()
                             .padding(.leading, 30)
                             .background(Color(.init(white: 1.0, alpha: 0.3)))
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color.black)
                             .textFieldStyle(PlainTextFieldStyle())
                             .cornerRadius(10)
                             .frame(width: UIScreen.main.bounds.width - 50)
@@ -62,7 +62,7 @@ struct LoginView: View {
                         SecureField("Password", text: $password)
                             .padding()
                             .padding(.leading, 30)
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color.black)
                             .background(Color(.init(white: 1.0, alpha: 0.3)))
                             .textFieldStyle(PlainTextFieldStyle())
                             .cornerRadius(10)
@@ -90,11 +90,12 @@ struct LoginView: View {
                     Button(action: {}, label: {
                         Text("Sign In")
                             .fontWeight(.bold)
-                    }).padding()
-                    .frame(width: UIScreen.main.bounds.width - 50)
+                    })
+                    .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 50)
                     .background(Color.white)
                     .foregroundColor(Color.black)
                     .clipShape(Capsule())
+                    .padding()
 
                     
                     Spacer()
@@ -108,8 +109,9 @@ struct LoginView: View {
                     
                 }.padding(.top, 70)
                 
-             
-            }.edgesIgnoringSafeArea(.all)
+              }.edgesIgnoringSafeArea(.all)
+            
+            
         }
     }
     
